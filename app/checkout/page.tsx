@@ -3,11 +3,9 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import InterventionModal from '@/components/InterventionModal'
 
 export default function CheckoutPage() {
-  const searchParams = useSearchParams()
   const [paymentMethod, setPaymentMethod] = useState<'full' | 'bnpl' | null>(null)
   const [showIntervention, setShowIntervention] = useState(false)
   const [orderComplete, setOrderComplete] = useState(false)
